@@ -15,11 +15,12 @@
       crossorigin="anonymous"
     />
     <!-- Compiled and minified CSS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <!-- Compiled and minified Jquery -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -43,8 +44,13 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <script>
-      $(document).ready(function() {
-        $(".sidenav").sidenav();
+      // $(document).ready(function() {
+      //   $(".sidenav").sidenav();
+      // });
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var elems = document.querySelectorAll(".sidenav");
+        var instances = M.Sidenav.init(elems);
       });
     </script>
 
