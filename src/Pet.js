@@ -124,7 +124,8 @@ class Pet extends Component {
                     >
                       # of licks {this.state.licks}
                     </button>
-                    {this.state.pet.sociallink !== undefined ? (
+                    {this.state.pet.sociallink !== null &&
+                    this.state.pet.sociallink !== undefined ? (
                       <a href={this.state.pet.sociallink}>
                         <img
                           className="instagram"
